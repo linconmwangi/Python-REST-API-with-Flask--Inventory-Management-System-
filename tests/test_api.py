@@ -291,7 +291,7 @@ class TestExternalAPI:
     def test_fetch_product_api_error(self, mock_get):
         """Test handling of API errors"""
         mock_get.side_effect = Exception("Connection error")
-        result = external_api.fetch_product_by_barcode("5901234123457")
+        result = external_api.fetch_product_by_barcode("999999999999")
         assert result is None
     
     def test_format_product_data(self):
