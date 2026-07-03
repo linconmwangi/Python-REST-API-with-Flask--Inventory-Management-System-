@@ -11,7 +11,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Create blueprint for API routes
-api = Blueprint("api", __name__, url_prefix="/api/inventory")
+api = Blueprint("api", __name__, url_prefix="/inventory")
 
 
 # ==================== READ OPERATIONS ====================
@@ -19,7 +19,7 @@ api = Blueprint("api", __name__, url_prefix="/api/inventory")
 @api.route("", methods=["GET"])
 def get_all_items():
     """
-    GET /api/inventory
+    GET /inventory
     Fetch all inventory items
     
     Returns:
@@ -44,7 +44,7 @@ def get_all_items():
 @api.route("/<int:item_id>", methods=["GET"])
 def get_item(item_id):
     """
-    GET /api/inventory/<id>
+    GET /inventory/<id>
     Fetch a single inventory item by ID
     
     Args:
@@ -77,7 +77,7 @@ def get_item(item_id):
 @api.route("/search", methods=["GET"])
 def search_items():
     """
-    GET /api/inventory/search?q=<query>&field=<field>
+    GET /inventory/search?q=<query>&field=<field>
     Search inventory items
     
     Query Parameters:
@@ -117,7 +117,7 @@ def search_items():
 @api.route("", methods=["POST"])
 def create_item():
     """
-    POST /api/inventory
+    POST /inventory
     Add a new inventory item
     
     JSON Body:
@@ -184,7 +184,7 @@ def create_item():
 @api.route("/from-api", methods=["POST"])
 def create_item_from_api():
     """
-    POST /api/inventory/from-api
+    POST /inventory/from-api
     Create inventory item by fetching from external API
     
     JSON Body:
@@ -257,7 +257,7 @@ def create_item_from_api():
 @api.route("/<int:item_id>", methods=["PATCH"])
 def update_item(item_id):
     """
-    PATCH /api/inventory/<id>
+    PATCH /inventory/<id>
     Update an existing inventory item
     
     Args:
@@ -305,7 +305,7 @@ def update_item(item_id):
 @api.route("/<int:item_id>", methods=["DELETE"])
 def delete_item(item_id):
     """
-    DELETE /api/inventory/<id>
+    DELETE /inventory/<id>
     Remove an item from inventory
     
     Args:
@@ -347,7 +347,7 @@ def delete_item(item_id):
 @api.route("/stats", methods=["GET"])
 def get_stats():
     """
-    GET /api/inventory/stats
+    GET /inventory/stats
     Get inventory statistics
     
     Returns:
@@ -384,7 +384,7 @@ def get_stats():
 @api.route("/reset", methods=["POST"])
 def reset_inventory():
     """
-    POST /api/inventory/reset
+    POST /inventory/reset
     Reset inventory to initial state (for testing/development)
     
     Returns:
