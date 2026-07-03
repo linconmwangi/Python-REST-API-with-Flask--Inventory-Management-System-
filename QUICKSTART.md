@@ -124,6 +124,3 @@ tests/
 - Make sure Flask server is running in another terminal
 - Check host/port in `cli/main.py`
 
-## 📖 Full Documentation
-
-See [README.md](README.md) for complete API documentation and advanced usage.

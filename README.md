@@ -122,10 +122,3 @@ gunicorn -w 4 -b 0.0.0.0:5000 run:app
 
 Flask, Flask-CORS, requests, pytest, pytest-cov, python-dotenv
 
-## Author
-
-Created as part of Moringa School curriculum — Summative Lab 01
-
----
-
-**Last Updated:** 2026-07-03 · **Version:** 1.0.0
